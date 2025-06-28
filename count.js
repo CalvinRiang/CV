@@ -41,3 +41,10 @@ window.onload = function () {
   showSlide(currentIndex); // Tampilkan pertama kali
   setInterval(nextSlide, 5000); // Auto fade tiap 5 detik
 };
+
+const ring  = document.getElementById("ring");
+ring.addEventListener("click", function()  {
+    if(ring) {
+        window.location.href = "ring.html";
+    }
+})
