@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+    <div class="logo">
+        <h1>Hello Ms VVV</h1>
+    </div>
+    <ul class="nav-menu">
+        <li>
+        <a href="index.html" title="Home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+        </a>
+        </li>
+
+        <li>
+        <a href="au.html" title="About Us">
+        <i class="fas fa-users"></i>
+        <span>About Us</span>
+        </a>
+        </li>
+  </ul>
+</nav>
+    
+  <section class="time-together">
+    <h2>Time Together : </h2>
+    <div id="countup"></div>
+  </section>
+
+  <section id="highlight" class="highlight">
+    <h1>💜 Our Memories 💜</h1>
+    <img src="asset/WhatsApp Image 2025-06-27 at 10.52.00_24be582d.jpg" alt="Kenangan Awal" onclick="location.href='detail.html';">
+    <p>(Klik fotonyaa ya Sayangg)</p>
+  </section>
+
+  <footer>
+    <p>From your special troublemaker, Riang 💕</p>
+  </footer>
+
+  <script>
+    function updateCounter() {
+      const start = new Date("2022-02-12T01:00:00+07:00"); 
+      const now = new Date();
+      const diff = now - start;
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("countup").innerHTML =
+        `<span>${days}</span> hari <span>${hours}</span> jam <span>${minutes}</span> menit <span>${seconds}</span> detik`;
+    }
+
+    setInterval(updateCounter, 1000);
+    updateCounter();
+  </script>
+
+</body>
+</html>
+
+
