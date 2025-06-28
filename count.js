@@ -42,9 +42,9 @@ window.onload = function () {
   setInterval(nextSlide, 5000); // Auto fade tiap 5 detik
 };
 
-const ring  = document.getElementById("ring");
-ring.addEventListener("click", function()  {
-    if(ring) {
-        window.location.href = "ring.html";
-    }
-})
+const ring = document.getElementById("ring");
+if (ring) {
+  ring.addEventListener("click", function () {
+    window.location.href = "ring.html";
+  });
+}
